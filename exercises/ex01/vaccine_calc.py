@@ -45,7 +45,4 @@ numero_days = doses_needed // doses_perday
 number_days: timedelta = timedelta(numero_days)
 future: datetime = today + number_days
 
-print(numero_days)
-print(target_percent)
-
 print("We will reach" ,  target_percent , "% vaccination in" , numero_days , "days, which falls on" , future.strftime("%B %d, %Y"))
