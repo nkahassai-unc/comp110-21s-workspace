@@ -17,16 +17,15 @@ print("Your fortune cookie says...")
 
 
 if numero == 1:
-        print("A dubious friend may be an enemy in camouflage.") 
+    print("A dubious friend may be an enemy in camouflage.") 
 else:
-        if numero == 2:
-            print("A cynic is only a frustrated optimist.")
+    if numero == 2:
+        print("A cynic is only a frustrated optimist.")
+    else:
+        if numero == 3:
+            print("No snowflake in an avalanche ever feels responsible")
         else:
-            if numero == 3:
-                print("No snowflake in an avalanche ever feels responsible")
-            else:
-                if numero == 4:
-                    print("Your efforts have not gone unnoticed.")
-
+            if numero == 4:
+                print("Your efforts have not gone unnoticed.")
 
 print("Now, go spread positive vibes!")

@@ -16,33 +16,32 @@ from datetime import datetime
 # Official Documentation: https://docs.python.org/3/library/datetime.html#datetime.timedelta
 from datetime import timedelta
 
+# Begin your solution here...
 today: datetime = datetime.today()
 
-# Begin your solution here...
+prompt_populacion = input("Population: ") 
+populacion = int(prompt_populacion) 
+# Promp population figures.
 
-pop = input("Population: ") 
-populacion = int(pop) 
+prompt_doses_admin = input("Doses Administered: ") 
+doses_admin = int(prompt_doses_admin) 
+# Prompt doses adminstrated.
 
-do_ad = input("Doses Administered: ") 
-doses_admin = int(do_ad) 
+prompt_doses = input("Doses per day: ") 
+doses_perday = int(prompt_doses) 
+# Prompt doses per day.
 
-do_pe = input("Doses per day: ") 
-doses_perday = int(do_pe) 
-
-tar = input("Target percent vaccinated: ") 
-target_percent = int(tar) 
-
-ladate = today.strftime("%B %d, %Y")
+prompt_percent = input("Target percent vaccinated: ") 
+target_percent = int(prompt_percent) 
+# Prompt target percentage.
 
 ppl = populacion * (target_percent / 100)
 
-ppl_need = (ppl - doses_admin / 2)
+doses_need = 2 * (ppl - doses_admin / 2)
 
-doses_needed = ppl_need * 2
-
-numero_days = doses_needed // doses_perday
-
-number_days: timedelta = timedelta(numero_days)
+days = round(doses_need // doses_perday)
+number_days: timedelta = timedelta(days)
 future: datetime = today + number_days
+print_perc = str(target_percent)
 
-print("We will reach" ,  target_percent , "% vaccination in" , numero_days , "days, which falls on" , future.strftime("%B %d, %Y"))
+print("We will reach " + print_perc + "% vaccination in", days, "days, which falls on", future.strftime("%B %d, %Y"))
